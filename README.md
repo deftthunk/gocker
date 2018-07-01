@@ -4,12 +4,12 @@ This is a bash wrapper for turning Golang's official docker image
 into a container that acts like the native command line compiler.
 
 Performs the following:
--mounts host GOPATH dir to container's /go folder
--adds a tmpfs file system in rwx mode
--sets up container's environment variables for Go
--drops container user to UID=1000 for security purposes
--reflects current working directory in container FS
--destroys container after running
+- mounts host GOPATH dir to container's /go folder
+- adds a tmpfs file system in rwx mode
+- sets up container's environment variables for Go
+- drops container user to UID=1000 for security purposes
+- reflects current working directory in container FS
+- destroys container after running
 
 To use:
 1) Download and install DockerCE
