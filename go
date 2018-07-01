@@ -17,19 +17,19 @@ fi
 
 # quick version that doesn't mount volumes
 gohelp="docker run --rm --label 'golang' -u 1000 \
-				golang:alpine go help"
+        golang:alpine go help"
 
 # mount arguments for docker volumes
 gomnt=" --mount type=bind,source=$HOME/$godir,target=/go"
 
 # docker environment vars
 goenv=" -e GOBIN=/go/bin \
-				-e GOTMPDIR=/tmp \
-				-e GOCACHE=/tmp/.cache/go-build"
+        -e GOTMPDIR=/tmp \
+        -e GOCACHE=/tmp/.cache/go-build"
 
 # full Go command; 
 gocmd="docker run --rm --label golang -u 1000 \
-			 -w $workdir $gomnt $goenv --tmpfs /tmp:exec,mode=777,size=65535k golang:alpine go"
+       -w $workdir $gomnt $goenv --tmpfs /tmp:exec,mode=777,size=65535k golang:alpine go"
 
 # if container runs without args or has "help" as a CLI arg,
 # run 'go'. else, run the full thing with volumes mounted
