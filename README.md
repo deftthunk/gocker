@@ -18,8 +18,8 @@ To use:
 (ex. if GOPATH is /home/user/code/go, then godir='code/go')
 
 ### Usage examples:
-go version
-go build project
-go run main.go
+- go version
+- go build project
+- go run main.go
 
 Enjoy!
