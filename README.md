@@ -11,7 +11,7 @@ into a container that acts like the native command line compiler.
 - reflects current working directory in container FS
 - destroys container after running
 
-To use:
+### To use:
 1) Download and install DockerCE
 2) Ensure docker daemon is running
 3) Change first variable "godir" to your host's relative GOPATH dir
